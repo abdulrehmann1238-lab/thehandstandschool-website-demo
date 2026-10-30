@@ -1,0 +1,81 @@
+:root {
+  /* Brand Color Tokens */
+  --color-deep-black: #050B0A;
+  --color-forest-green: #003C32;
+  --color-dark-teal: #00566A;
+  --color-turquoise: #00D7BD;
+  --color-turquoise-hover: #00bfab;
+  --color-soft-cyan: #36D9D0;
+  --color-lime: #B8F23B;
+  --color-pure-white: #FFFFFF;
+  --color-warm-white: #F7FAF8;
+  --color-charcoal: #181E1D;
+  --color-card-dark: #0A1211;
+  --color-card-surface: #0E1A18;
+  --color-muted-grey: #AAB9B5;
+  --color-text-dim: #7C8F8A;
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-light: rgba(0, 0, 0, 0.08);
+  --color-border-teal: rgba(0, 215, 189, 0.25);
+
+  /* Typography */
+  --font-heading: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.35s;
+
+  /* Layout */
+  --header-height: 72px;
+  --max-width: 1240px;
+  --max-width-narrow: 840px;
+  --gutter: 24px;
+}
+
+/* Dark pattern background with subtle dots */
+.bg-dots-dark {
+  background-color: var(--color-deep-black);
+  background-image: radial-gradient(rgba(0, 215, 189, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Light pattern background with subtle dots */
+.bg-dots-light {
+  background-color: var(--color-warm-white);
+  background-image: radial-gradient(rgba(0, 60, 50, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Diagonal lines background */
+.bg-diagonal-dark {
+  background-color: var(--color-forest-green);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(0, 215, 189, 0.03),
+    rgba(0, 215, 189, 0.03) 1px,
+    transparent 1px,
+    transparent 16px
+  );
+}
+
+/* Deep teal section */
+.bg-teal-section {
+  background-color: var(--color-dark-teal);
+  background-image: radial-gradient(circle at 80% 20%, rgba(54, 217, 208, 0.15) 0%, transparent 60%);
+}
+
+/* Offset turquoise border container */
+.offset-border-teal {
+  position: relative;
+}
+.offset-border-teal::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1.5px solid var(--color-turquoise);
+  pointer-events: none;
+  z-index: 1;
+}
+
